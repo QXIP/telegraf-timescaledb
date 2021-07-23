@@ -1,9 +1,9 @@
 FROM debian:9
-ENV TELEGRAF_VERSION 1.11.5
+ENV TELEGRAF_VERSION 1.13.0
 
 RUN apt update && apt update && apt install -y wget && \
-  wget https://telegrafreleases.blob.core.windows.net/linux/telegraf_1.11.3~with~pg-1_amd64.deb && \
-  dpkg -i telegraf_1.11.3~with~pg-1_amd64.deb && \
+  wget https://telegrafreleases.blob.core.windows.net/linux/telegraf_1.13.0~with~pg-1_amd64.deb && \
+  dpkg -i telegraf_1.13.0~with~pg-1_amd64.deb && \
   rm -rf /var/lib/apt/lists/*
 
 RUN wget https://github.com/timescale/outflux/releases/download/0.2.0/outflux_0.2.0_Linux_x86_64.tar.gz && \
